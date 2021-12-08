@@ -1,9 +1,7 @@
 
-This repository utilizes Git LFS to serve large files - please follow the README-Download-Instructions.txt file in order to access these files.
+**SCICHEM 3.3**  
 
-**SCICHEM 3.2.2**  
-
-SCICHEM 3.2.2 is a reactive puff model that can be used to calculate  
+SCICHEM 3.3 is a reactive puff model that can be used to calculate  
 single or multi-source impacts of emissions at downwind locations.  The  
 model can be used for both short-range calculations (for example,  
 1-hour SO2, 1-hour NO2, 24-hour secondary PM2.5, or 8-hour ozone  
@@ -32,25 +30,24 @@ package includes the following:
 
 This distribution includes a limited version of a Graphical User  
 Interface (GUI), named "SCIPUFFgui, which is provided for the 64-bit  
-Windows 7 or higher operating system as an aid to the user for  
+Windows 8 or higher operating system as an aid to the user for  
 visualization of model results. The GUI can plot concentration contour  
 plots for surface, horizontal, or vertical slices for all source types.  
 Note that SCIPUFFgui can also be used to create and run SCICHEM   
 namelist-type projects. Note that it does not generate keyword-type
-projects (introduced in SCICHEM 3.x) and cannot be
-used to define some new source types such as area and volume  
-sources. Thus, users are recommended to use the GUI primarily for  
-viewing simulation results. 
+projects (introduced in SCICHEM 3.x) and cannot be used to define  area
+sources. It is recommended to use the GUI primarily for viewing simulation
+results or modifying input from existing projects. 
 
 This distribution consists of three readme files, namely "README.txt"  
 (this file),README-Examples.txt and "READMe-Build-Instructions.txt", 
-three documents, "3002016526 User's Guide.pdf" and "3002016526 Technical
-Documentation.pdf" and "3002016526 Support Document.pdf" and the following
+three documents, "3002022845 User's Guide.pdf" and "3002022845 Technical
+Documentation.pdf" and "3002022845 Support Document.pdf" and the following
 four zipped files (to limit the size of the individual zipped files):
 
--	SCICHEM-3.2-Binary.tar  
--	SCICHEM-3.2-Examples.tar  
--	SCICHEM-3.2-FC_MEDOC.tgz
+-	SCICHEM-3.3-Binary.tar  
+-	SCICHEM-3.3-Examples.tar  
+-	SCICHEM-3.3-FC_MEDOC.tgz
 -   CTM2SCICHEM.tar
 
 All the files should be unzipped in the same directory. These can be
@@ -61,7 +58,7 @@ directory and landuse.dat file point to the correct directory on the
 User's system. Details for running the SCIPUFFgui on Windows is  
 provided in the User's Guide.  
 
-Building downwash in SCICHEM 3.2 is based on PRIME (Schulman et al., 2000). 
+Building downwash in SCICHEM 3.3 is based on PRIME (Schulman et al., 2000). 
 PRIME has not been updated in over 15 years, and has been shown to overpredict 
 concentrations by factors of 2 to 8 for certain building types (Petersen et al., 2017). 
 New treatments for building downwash are being developed (Petersen et al., 2017)  
@@ -73,7 +70,7 @@ from the BPIPPRM output in the SO section. See the User's guide for details.
 
 The Mesoscale Model Interface Program (MMIF) on the U.S. EPA SCRAM web  
 site can be used to convert prognostic meteorological model (MM5 and/or  
-WRF) outputs to SCICHEM ready meteorological  inputs. SCICHEM 3.2  
+WRF) outputs to SCICHEM ready meteorological  inputs. SCICHEM 3.2 or later  
 requires MMIF version 3.4 or later for compatibility.  
 
 This is a full release that has been tested for a number of conditions.  
@@ -83,7 +80,7 @@ Intel compiler. For users interested in building the executable files
 on Linux or Windows machines, build scripts and Visual Fortran project  
 files for the Intel compiler are provided. Users can create builds  
 using other compilers but builds with non-Intel compilers have not been  
-tested at this time.  
+tested.  
 
 Additional details and user instructions are provided in the documents  
 bundled with the package. Users are requested to offer feedback to EPRI  
@@ -117,7 +114,7 @@ the surface deposition and dosage files, and calculate output (averaged
 concentrations, deposition, visibility obscuration) at arbitrary
 receptors (i.e. not specified before the SCICHEM run). For samplers
 that are not at the surface (e.g., at locations corresponding to
-aircraft measurements), the user can give SCICHEM a maximum of 500
+aircraft measurements), the user can define a maximum of 5000
 sampling locations.  
 
 3) The large scale variance type (ENSM_TYPE) should be set to none for  
