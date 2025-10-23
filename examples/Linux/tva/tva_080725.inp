@@ -1,0 +1,86 @@
+ &CTRL
+ RESTART = F,
+ FILE_RST        = '                                                                                                                 
+                                                                                                                                     
+          ',
+ PATH_RST        = '                                                                                                                 
+                                                                                                                                     
+          ',
+ TIME_RST        =  0.0000000E+00
+ /
+ &TIME1
+ YEAR_START      =        2008,
+ MONTH_START     =           7,
+ DAY_START       =          25,
+ TSTART  =   6.000000    ,
+ TZONE   =   18.00000    ,
+ LOCAL   = F
+ /
+ &TIME2
+ YEAR_END        =        2008,
+ MONTH_END       =           7,
+ DAY_END =          25,
+ TEND    =   21.00000    ,
+ TEND_HR =   15.00000    ,
+ DELT    =   900.0000    ,
+ DT_SAVE =   3600.000    
+ /
+ &FLAGS
+ TITLE   = 'Cumberland                                                                      ',
+ CREATE  = T,
+ AUDIT_CLASS     = '                                ',
+ AUDIT_ANALYST   = 'ARAP                            ',
+ DYNAMIC = T,
+ DENSE_GAS       = F,
+ STATIC  = T,
+ RUN_MODE        =        4096,
+ PRJEFFECTS      =      -65535
+ /
+ &DOMAIN
+ CMAP    = 'CARTESIAN                                                                       ',
+ XMIN    =  -150.0000    ,
+ XMAX    =   150.0000    ,
+ YMIN    =  -150.0000    ,
+ YMAX    =   150.0000    ,
+ ZMAX    =   2500.000    ,
+ VRES    =  9.9999996E+35,
+ HRES    =  9.9999996E+35,
+ UTM_ZONE        =       65535,
+ XREF    =  0.0000000E+00,
+ YREF    =  0.0000000E+00,
+ LON0    =  -87.65230    ,
+ LAT0    =   36.39000    
+ /
+ &OPTIONS
+ T_AVG   =  0.0000000E+00,
+ CMIN    =  0.0000000E+00,
+ DELMIN  =  9.9999996E+35,
+ WWTROP  =  9.9999998E-03,
+ EPSTROP =  3.9999990E-04,
+ SLTROP  =   10.00000    ,
+ UU_CALM =  0.2500000    ,
+ SL_CALM =   1000.000    ,
+ NZBL    =          11,
+ MGRD    =           2,
+ Z_DOSAGE        =  0.0000000E+00,
+ SMPFILE = '../../Common/TVA/tva_080725.sam                                                                                          
+                                                                                                                                     
+  ',
+ DT_SMP  =   3600.000    ,
+ SUBSTRATE_TYPE  =           0
+ /
+ &MATDEF
+ CLASS   = 'GAS             ',
+ MNAME   = 'TRAC            ',
+ UNITS   = 'kg              ',
+ FILE_NAME       = '../../Common/TVA/fullchem_ae5_v34_amine_TN.imc                  ',
+ FILE_PATH       = '                                                                ',
+ GROUP_DEPOSITION        = T,
+ GROUP_DOSE      = T,
+ MULTI_COMP      = F,
+ CONC_MIN        =  0.0000000E+00,
+ DECAY_AMP       =  0.0000000E+00,
+ DECAY_MIN       =  0.0000000E+00,
+ DENSITY =   1.200000    ,
+ GAS_DEPOSITION  =  0.0000000E+00
+ /

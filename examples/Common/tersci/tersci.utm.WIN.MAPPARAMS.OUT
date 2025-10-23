@@ -1,0 +1,64 @@
+  
+ MAP PARAMETERS
+
+ TYPDAT:  NED 
+
+ From CNRCNV:
+
+ NED File #:         1
+ NED File Name: ..\NED\16102713.tif
+
+ Horizontal Datum: North American Datum of 1983            
+
+ Corner Coordinates of NED Data:
+
+ Decimal Degrees (negative for West longitude):
+            SW Corner     NW Corner     NE Corner     SE Corner
+   Lon:   -116.300046   -116.300046   -116.200046   -116.200046
+   Lat:     43.500046     43.600046     43.600046     43.500046
+
+ Arc-seconds (negative for West longitude):
+            SW Corner     NW Corner     NE Corner     SE Corner
+   Lon:   -418680.167   -418680.167   -418320.167   -418320.167
+   Lat:    156600.167    156960.167    156960.167    156600.167
+
+ Meters:
+                 SW Corner     NW Corner     NE Corner     SE Corner
+   Easting:     556587.320    556493.836    564564.943    564671.784
+   Northing:   4816584.458   4827690.404   4827763.262   4816657.303
+   UTM Zone:   11 based on SW corner
+  
+
+ From CHKADJ      
+
+ NED File #:      1
+ NED:16102713.tif                         <-- Raw header data segment
+ NED:16102713.tif                         <-- Refined header data segment
+   DEM Level Code:    NED 
+   Planimetric Ref: Geographic Coordinates   
+     North-South Node separation:   0.3333  arc-seconds
+     East-West Node separation:     0.3333  arc-seconds
+   UTM/State Zone #  11
+   Horizontal Datum: North American Datum of 1983            
+   Num. of Profiles:  1081
+   SW Corner Lat/Lon (deg.):       43.50005    -116.30005
+   SW Corner Lat/Lon (sec.):     156600.167   -418680.167
+   Latitude Range =  0.1000 Deg.;  Longitude Range =  0.1000 Deg.
+   Writing corner coords; UTM then Dec.Deg (negative for West longitude):
+     Southwest Corner        Northwest Corner        Northeast Corner        Southeast Corner
+     Easting    Northing     Easting    Northing     Easting    Northing     Easting    Northing 
+     556587.32  4816584.46   556493.84  4827690.40   564564.94  4827763.26   564671.78  4816657.30
+     Latitude   Longitude    Latitude   Longitude    Latitude   Longitude    Latitude   Longitude
+     43.5000   -116.3000     43.6000   -116.3000     43.6000   -116.2000     43.5000   -116.2000
+
+  
+
+
+ From INITER_NED:
+
+ MIN and MAX Elevations for NED files:
+
+ NED File #:      1
+ NED:16102713.tif                        
+   Min. Elevation:    823.2 meters
+   Max. Elevation:    976.8 meters

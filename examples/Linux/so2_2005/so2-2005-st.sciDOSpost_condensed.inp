@@ -1,0 +1,28 @@
+# The keyword PROJECT gives the SCICHEM project basenames
+Project so2-2005-st
+
+# The keyword CALCulate specifies whether to include background concentrations.
+calculate plume  ! plume (default) or total = ambient + plume
+
+# Time to process
+Start 2005-01-01:00   ! any of these forms work, also 2010/01/01 00
+STOP  2005123124
+TimeZone   -7    ! default is zero, i.e. GMT-00
+
+# Receptor section:
+#   Name   LL/UTM Class Filename
+rec samp   utm    2     so2-2005-st.sam
+
+# GRID (repeatable) keyword specifies a regularly-spaced receptor grid to use.
+#     Name    LL/UTM  DX     xWest    ySouth    xEast    yNorth   
+GRID  grid    UTM     0.050  560.550  4824.800  560.750  4825.050
+
+# Output section:
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  so2   ug/m3  samp    AllRec  ALL    1 hr    Average   POST  so2-2005-st.sciDOSpost.samp.pst
+con  so2   ug/m3  samp    MaxRec  4th    1 hr    MaxDaily  CSV   max_concentrations.csv
+con  so2   ug/m3  samp    MaxRec  2nd    3 hr    Average   CSV   max_concentrations.csv
+con  so2   ug/m3  samp    MaxRec  1st   24 hr    Average   CSV   max_concentrations.csv
+con  so2   ug/m3  samp    MaxRec  1st    1 yr    Average   CSV   max_concentrations.csv
+con  so2   ug/m3  grid    AllRec  ALL    1 hr    Average   POST  so2-2005-st.sciDOSpost.grid.pst
+con  so2   ug/m3  grid    AllRec  4th    1 hr    MaxDaily  PLOT  so2-2005-st.dv.plt

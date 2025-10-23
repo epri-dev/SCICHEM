@@ -1,0 +1,54 @@
+{
+  "version": 5,
+  "include": [
+    "CMakePresets.base.json"
+  ],
+  "configurePresets": [
+    {
+      "name": "linux-epri",
+      "inherits": [
+        "linux",
+        "epri"
+      ]
+    },
+    {
+      "name": "windows-epri",
+      "inherits": [
+        "windows",
+        "epri"
+      ]
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "linux-epri-release",
+      "configurePreset": "linux-epri",
+      "configuration": "Release"
+    },
+    {
+      "name": "linux-epri-relwithdebinfo",
+      "configurePreset": "linux-epri",
+      "configuration": "RelWithDebInfo"
+    },
+    {
+      "name": "linux-epri-debug",
+      "configurePreset": "linux-epri",
+      "configuration": "Debug"
+    },
+    {
+      "name": "windows-epri-release",
+      "configurePreset": "windows-epri",
+      "configuration": "Release"
+    },
+    {
+      "name": "windows-epri-relwithdebinfo",
+      "configurePreset": "windows-epri",
+      "configuration": "RelWithDebInfo"
+    },
+    {
+      "name": "windows-epri-debug",
+      "configurePreset": "windows-epri",
+      "configuration": "Debug"
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+********************************************************
+** MET2SCI Input
+********************************************************
+JOB
+   REPORT      kboi2005.rpt
+   MESSAGES    kboi2005.msg
+
+UPPERAIR
+
+   DATA        KBOI.FSL.2005.TXT FSL
+   EXTRACT     KBOI2005.PRF
+   QAOUT       TRUE
+   XDATES      2005/01/01 TO 2005/12/31
+
+SURFACE
+
+   DATA        KBOI.2005.ISHD ISHD
+   EXTRACT     KBOI2005.SFC
+   QAOUT       TRUE
+
+   XDATES      2005/01/01 TO 2005/12/31
+
+   LANDUSE     CULTIVATED
+
+

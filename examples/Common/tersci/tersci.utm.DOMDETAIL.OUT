@@ -1,0 +1,81 @@
+TERSCI Version 1.0 2015-05-05 01/11/19 12:03:57
+
+DOMCNV/CHKEXT:
+
+TYPDEM = "LAT"
+
+        Domain                   LAT          LONG                         UTM-N (m)     UTM-E (m)   ZONE   NADA
+                                        (neg. for West long.)
+  NE corner coordinates:      156874.66    -418488.27 seconds            4825090.0000   560820.0000    11     4
+  SW corner coordinates:      156859.24    -418509.86 seconds            4824610.0000   560340.0000    11     4
+  NE corner coordinates:      43.576293   -116.246742 decimal deg.
+  SW corner coordinates:      43.572011   -116.252740 decimal deg.
+
+
+       Checking domain corner  1 relative to NED file: ../NED/16102713.tif
+
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156859.24      -418509.86       43.572011     -116.252740     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+Domain corner  1 Inside NED file     1: ../NED/16102713.tif
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156859.24      -418509.86       43.572011     -116.252740     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+  
+       Checking domain corner  2 relative to NED file: ../NED/16102713.tif
+
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156874.66      -418509.86       43.576293     -116.252740     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+Domain corner  2 Inside NED file     1: ../NED/16102713.tif
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156874.66      -418509.86       43.576293     -116.252740     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+  
+       Checking domain corner  3 relative to NED file: ../NED/16102713.tif
+
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156874.66      -418488.27       43.576293     -116.246742     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+Domain corner  3 Inside NED file     1: ../NED/16102713.tif
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156874.66      -418488.27       43.576293     -116.246742     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+  
+       Checking domain corner  4 relative to NED file: ../NED/16102713.tif
+
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156859.24      -418488.27       43.572011     -116.246742     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+Domain corner  4 Inside NED file     1: ../NED/16102713.tif
+                                  LAT (sec)      LONG (sec)      LAT (deg)      LONG (deg)    NAD
+       NED corner Lat/Lon:       156960.17      -418320.17       43.600046     -116.200046     4
+    Domain corner Lat/Lon:       156859.24      -418488.27       43.572011     -116.246742     4
+       NED corner Lat/Lon:       156600.17      -418680.17       43.500046     -116.300046     4
+  
+  
+From INITER_NED:
+
+Information on Direct Access Files Within User-specified Domain:
+
+No. of NED Files =      1
+
+Direct Access File for NED File No.      1 Contains      65 Profiles.
+
+ XBASE, YBASE and NODES for First Profile:     -418509.8333     156859.5000     46
+ XBASE, YBASE and NODES for Last  Profile:     -418488.5000     156859.5000     46
+

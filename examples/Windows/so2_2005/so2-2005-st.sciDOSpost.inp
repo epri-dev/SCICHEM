@@ -1,0 +1,125 @@
+; This file can be space-delimited or comma-delimited, or a mixture.
+; Comment characters are #, ;, and !.  Blank lines are ignored.
+; Keywords are not case-sensitive.  Filenames are used verbatim, and can
+; include spaces if enclosed in quotes.
+
+# The keyword PROJECT gives a space-delimited list of one or more SCICHEM 
+# project basenames. A list of basenames is useful if SCICHEM was run in sections
+# (e.g. months of a year).
+
+Project so2-2005-st
+
+# The keyword CALCulate specifies whether to include background concentrations.
+
+calculate plume  ! plume (default) or total = ambient + plume
+
+# Time to process. If PROJECT is a list of only 1 element (not run in sections), 
+# you can omit Start and Stop to process ALL data found.
+
+Start 2005-01-01:00   ! any of these forms work, also 2010/01/01 00
+stop  2005123124
+
+# The keyword TIMEZONE specifies the timezone you want to use for the output
+# concentrations, independent of the timezone used in the SCICHEM run being
+# processed. If SCICHEM used LST of GMT-0500, give 0 to shift back to UTC.
+# This affects N-hour concentrations (N > 1) and max daily rolling N-hour 
+# concentrations (because the 'day' is affected by the output timezone).
+# TimeZone is relative to GMT, i.e. -5 (GMT-05) is the US East Coast.
+
+TimeZone   -7    ! default is zero, i.e. GMT-00
+
+# Receptor section:
+# Receptor Sets can be specified by either:
+#   Using the REC  keyword to specify a file containing arbitrarily-spaced points.
+#   Using the GRID keyword to specify a set of regularly-spaced receptors.
+# NetCDF output only works with GRIDded (regularly-spaced) receptor sets. 
+# You can give zero REC lines or zero GRID lines, but you must specify at least
+# one REC or GRID to get any output. 
+# The Name of each receptor set is used in the Output section, below.
+
+# RECeptors (repeatable) keyword specifies the receptor files to use.
+# 2nd word is a user-specified NAME.  If the NAME matches the first 4 characters
+#    in the FLAG (2010) look-up tables, it is to be treated as a Class I area
+#    and VISilbity obscuration can be calculated.
+# 3rd word is either LONLAT (synonym: LL) or anything else for Cartesian
+#    (including UTM). MUST MATCH COORDINATE SYSTEM and UNITS of the SCICHEM run!
+#    NOTE: The Class I area files are lon,lat,elev so custom files must also
+#    be lon,lat (elev is ignored).
+# 4th word is one of:
+#    1  if the receptor set is to be treated as a Class I area
+#    2  if the receptor set is a Class II area (i.e. not Class I)
+# 5th word is the filename. Files can be the Class I receptor files downloaded 
+#    from http://www2.nature.nps.gov/air/maps/Receptors/index.cfm; or can 
+#    contain user-specified receptors: one UTMx,UTMy, or LON,LAT pair per line.
+
+#   Name   LL/UTM Class Filename
+rec samp   utm    2     so2-2005-st.sam
+
+# GRID (repeatable) keyword specifies a regularly-spaced receptor grid to use.
+# 2nd word is a user-specified NAME.
+# 3rd word is either LONLAT (synonym: LL) or anything else for Cartesian.
+# 4th word is the grid spacing, DX, in cartesian units or lat-lon.
+# 5th and 6th words are the coordinates of the southwest (lower left) gridpoint
+# 7th and 8th words are the coordinates of the northeast (upper right) gridpoint
+#   Use the same X,Y cartesian units used in SCICHEM - mostly likely km (not m).
+#   If specifying a lat-lon grid, then the X's are longitude, Y's are latitude.
+#   GRIDs cannot be treated as Class I areas - those REC sets are ungridded.
+
+#     Name    LL/UTM  DX     xWest    ySouth    xEast    yNorth   
+GRID  grid    UTM     0.050  560.550  4824.800  560.750  4825.050
+
+# Output section:
+# 1st word is one of 
+#    CON for concentration          (default: ug/m3)
+#    DEP for total deposition       (default: kg/ha)
+#    WET for wet   deposition       (default: kg/ha)
+#    DRY for dry   deposition       (default: kg/ha)
+#    VIS for visibility degradation (only:    percent change)
+# 2nd word is one of:
+#    The chemical SPECIES to process, e.g. no2 or o3 or pm25, etc.
+#    dBext for the change to the background extinction coefficient for visibility
+#    cont  for the contributions of each term in the equation for dBext
+# 3rd word is the requested output units:
+#    Gas species can be written in ug/m3, ppm, or ppb
+#    Particlate species can only be written in ug/m3
+#    Deposition can be written in kg/ha, g/m2, kg/m2, g/cm2, etc.
+#    Visibility can only be written in Percent
+# 4th word is the Receptor Set for this output, must match either a REC or GRID
+# 5th word is a SPACE selection criteria, one of:
+#    AllRec: Output for every receptor. If TIME=ALL, it will be like a POSTFILE.
+#       This is the only choice that makes sense for GRIDs.
+#    MaxRec: Output a single receptor within each receptor set, where the 
+#       maximum HIGH-highest (HIGH==RANK) occurred, e.g. the H8H.
+#    >=N: Output all values (of HIGH==RANK) that exceed the given concentration.
+#       Remember that if using 'calculate plume' you can have valid negative
+#       concentrations (e.g. NOx titration of O3), so >0 might discard data.
+# 6th word is a TIME or RANK selection criteria, one of:
+#    All: Output values for all time Periods
+#       To get a time series, use a RECeptor set with only 1 point and 'TIME=ALL'.
+#    1st, 2nd,... 8th (etc) highest HIGH or RANK (which are 'synonyms').
+# 7th and 8th words specify the PERIOD over which to take some STATISTIC.
+# 9th word is the STATISTIC, one of:
+#    Average  to take the *windowed* average (e.g. 1-8, 9-16, 17-24).
+#       See the examples for 8-hr CO below.
+#    MaxDaily to take the maximum PERIOD *rolling* average from each 24 hours. 
+#       See the examples for 8-hr O3 below. Note a rolling 1-hr MaxDaily is the
+#       same as a windowed 1-hr MaxDaily value, so 1-hr NO2/SO2 use MaxDaily.
+# 10th word is the output FILE TYPE:
+#    CSV  Comma-separated values
+#    XZY  Actually XYLLZUT: the X,Y,lat,lon, value, units, timestamp
+#    POST AERMOD-style POSTFILE (values for all times and all receptors)
+#    PLOT AERMOD-style PLOTFILE (a single high/rank value at all receptor)
+#    NC   NetCDF gridded file in I/O API-compliant format (only for GRIDs)
+#    GRD  Surfer 6 ascii grid file (only for GRIDs)
+# 11th word is the FILENAME, can contain spaces if enclosed in quotes.
+
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  so2   ug/m3  samp    AllRec  ALL    1 hr    Average   POST  so2-2005-st.sciDOSpost.samp.pst
+con  so2   ug/m3  samp    MaxRec  4th    1 hr    MaxDaily  CSV   max_concentrations.csv
+con  so2   ug/m3  samp    MaxRec  2nd    3 hr    Average   CSV   max_concentrations.csv
+con  so2   ug/m3  samp    MaxRec  1st   24 hr    Average   CSV   max_concentrations.csv
+con  so2   ug/m3  samp    MaxRec  1st    1 yr    Average   CSV   max_concentrations.csv
+
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  so2   ug/m3  grid    AllRec  ALL    1 hr    Average   POST  so2-2005-st.sciDOSpost.grid.pst
+con  so2   ug/m3  grid    AllRec  4th    1 hr    MaxDaily  PLOT  so2-2005-st.dv.plt

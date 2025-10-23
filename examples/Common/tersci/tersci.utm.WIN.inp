@@ -1,0 +1,34 @@
+; Comment characters are #, ;, and !.  Blank lines are ignored.
+; Values can be space-delimited OR comma-delimited, or a mix.
+; Keywords are case-insenstive, filenames are not.
+
+# USE is followed by either LATLON (alt: LL), or UTM and the UTM zone
+
+USE UTM    11
+
+# DOMAIN is followed by two lower-left, and two upper-right, coordinates.
+#   Latitutude  is positive in the Northern hemisphere
+#   Longitutude is positive in the Eastern  hemisphere
+
+; Domain latlon  43.572372, -116.252243 43.575939, -116.247238
+DOMAIN 560380 4824650 560780 4825050
+
+# SPACING gives the horizontal resolution, in degrees (LL) or meters (UTM)
+
+Spacing 50       !  meters (UTM)
+
+# INPUT gives the type (NED or DEM), followed by the (path+)filename.
+# Can contain spaces, if enclosed in quotes. Reads the same types of
+# DEM/NED files as AERMAP.  Download NED data from:
+#   http://www.mrlc.gov/viewerjs/  (seamless GeoTiff)
+#   ftp://rockyftp.cr.usgs.gov/vdelivery/Datasets/Staged/NED (ArcGrid)
+# The ftp server has 1x1 degree ArcGrid files, which need to be converted
+# to GeoTiff files (e.g. ArgGIS or gdalwarp).
+
+INPUT  NED ..\NED\16102713.tif
+
+# OUTPUT gives the path and filename of the output terrain file.
+# Can contain spaces, if enclosed in quotes.
+
+OUTPUT  terrain.utm.ter
+

@@ -1,0 +1,35 @@
+
+MODULE simple_fd
+
+  INTEGER, PARAMETER :: SCB_COMBINE = 0
+  INTEGER, PARAMETER :: SCB_FILTER  = 1
+  INTEGER, PARAMETER :: SCB_DEP     = 2
+  INTEGER, PARAMETER :: SCB_MAXIMIZE= 3
+  INTEGER, PARAMETER :: SC_COMBINE  = 2**SCB_COMBINE
+  INTEGER, PARAMETER :: SC_FILTER   = 2**SCB_FILTER
+  INTEGER, PARAMETER :: SC_DEP      = 2**SCB_DEP
+  INTEGER, PARAMETER :: SC_MAXIMIZE = 2**SCB_MAXIMIZE
+
+  REAL, PARAMETER :: TIME_EPS    = 0.001
+
+  TYPE CombineRecord
+    SEQUENCE
+    CHARACTER(32) primaryField
+    CHARACTER(32) secondaryField
+    REAL primaryFactor
+    REAL secondaryFactor
+    REAL correlation
+  END TYPE
+
+  TYPE CombineBlock
+    SEQUENCE
+    INTEGER Sid
+    LOGICAL push
+    REAL(8) pFactor
+    REAL(8) sFactor
+    REAL(8) cFactor
+    INTEGER Pblk
+    INTEGER dummy
+  END TYPE
+
+END MODULE simple_fd

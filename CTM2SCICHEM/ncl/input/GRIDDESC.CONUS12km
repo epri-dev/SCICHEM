@@ -1,0 +1,7 @@
+!  coords --line:  name; type  P-alpha  P-beta  P-gamma  xcent  ycent
+'CONUS12'
+  2        33.000        45.000       -97.000       -97.000        40.000
+' '  !  end coords.  grids:  name; xorig,yorig,xcell,ycell,ncols,nrows,nthik
+'CONUS12km'
+'CONUS12'  -2412000.000  -1620000.000   12000.000   12000.000  396  246   1
+' '  !  end grids.

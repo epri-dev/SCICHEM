@@ -1,0 +1,4 @@
+LOGICAL FUNCTION DummyTables()
+DummyTables = .FALSE.
+RETURN
+END

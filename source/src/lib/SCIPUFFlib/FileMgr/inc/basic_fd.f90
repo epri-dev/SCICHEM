@@ -1,0 +1,19 @@
+MODULE basic_fd
+  USE, INTRINSIC :: ISO_C_BINDING, ONLY: C_INTPTR_T
+
+!==== Basic WINDOWS parameters
+
+  INTEGER, PARAMETER :: TRUE  = 1
+  INTEGER, PARAMETER :: FALSE = 0
+  INTEGER, PARAMETER :: NULL  = 0
+
+  ! Length required to hold a C pointer in an INTEGER
+  INTEGER, PARAMETER :: LEN_ADDRESS = C_INTPTR_T
+
+#if defined(LINUX)
+  CHARACTER(1),PARAMETER :: PATH_SEPARATOR = "/"
+#else
+  CHARACTER(1),PARAMETER :: PATH_SEPARATOR = "\"
+#endif
+
+END MODULE basic_fd

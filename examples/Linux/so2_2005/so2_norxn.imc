@@ -1,0 +1,22 @@
+#Control
+ &CONTROL
+  ambient_file = ' '
+  emission_units = 'g/s',
+  species_units = 'ppm',
+  rate_time_units = 'min',
+  rtol = 1.e-3,
+ /
+#Species,Type,Ambient,Tolerance,deposition vel,wet scav,mw
+SO2       F           1.0000E-20        1.0000E-08   0.0000   0.0  64.00 T T
+NO2       F           1.0000E-20        1.0000E-08   0.0000   0.0  46.00 T T
+NO        F           1.0000E-20        1.0000E-08   0.0000   0.0  30.00 T T
+O         F           1.0000E-20        1.0000E-12   0.0      0.0  16.00
+O3        F           1.0000E-20        1.0000E-08   0.0000   0.0  48.00 T T
+H2O       A           -1.0              1.0000E-06   0.0      0.0  18.02
+#Group
+GNOX NO NO2
+#Balance  : N
+NO        1.0
+NO2       1.0
+#Equations -- Dummy equation for tracer species (SO2)
+  1 [NO2]  -> [NO] +  [O]    ;  1  0.000E+00

@@ -1,0 +1,52 @@
+TERSCI Version 1.0 2015-05-05 03/18/19 10:19:32
+
+ From NEDCHK:           1
+
+***********************
+ OPENING FILE: 
+
+   NED File #:         1
+   NED File Name: ..\NED\16102713.tif                                                                                                                                                                                     
+
+
+ Attempting to read TIFF file header.
+
+ Byte order: Little Endian 
+   IFD Offset (bytes):      4683480
+
+ Attempting to read TIFF tags.
+
+ Columns (profiles):       1081
+ Rows (nodes/profile):     1081
+
+ WARNING: TIFF Tag   274: Orientation          was not found - default used for
+          NED file:      1.
+          Orientation = 1; row-major with (0,0) = NW corner
+
+ TIFF Data Organization: Strips
+           RowsPerStrip:      1
+ TIFF Data SampleFormat: floating point
+         BytesPerSample:      4
+ Coordinate Type:  Geographic Lat-Lon System
+ Horizontal Datum: North American Datum of 1983            
+
+ WARNING: Elevation units not found in NED file      1.
+          Default units of METERS assumed.
+
+ GT Raster Type = Pixel Is Area
+   Model Tie Point (NW corner) adjusted to midpoint of pixel.
+ X Model Tie Point (NW corner of file):   -116.300093 (degrees);  -418680.333 (arc-seconds)
+ Y Model Tie Point (NW corner of file):     43.600093 (degrees);   156960.333 (arc-seconds)
+ Z Model Tie Point (reference elevation):       0.000  meters
+ Spatial Res. X:  0.000092593 (degrees);     0.333333 (arc-seconds)
+ Spatial Res. Y:  0.000092593 (degrees);     0.333333 (arc-seconds)
+ Spatial Res. Z:       1.0000  meters
+ SW Corner Lon (degrees): -116.300046
+ SW Corner Lat (degrees):   43.500046
+ NW Corner Lon (degrees): -116.300046
+ NW Corner Lat (degrees):   43.600046
+ NE Corner Lon (degrees): -116.200046
+ NE Corner Lat (degrees):   43.600046
+ SE Corner Lon (degrees): -116.200046
+ SE Corner Lat (degrees):   43.500046
+ Reference UTM Zone (SW corner):  11

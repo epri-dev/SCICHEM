@@ -1,0 +1,21 @@
+#Control
+ &CONTROL
+  ambient_file = ' '
+  emission_units = 'g/s',
+  species_units = 'ppm',
+  rate_time_units = 'min',
+  particle_types = 'P',
+  particle_units = 'ug/m3',
+  rtol = 1.e-3,
+ /
+#Species,Type,Ambient,Tolerance,deposition vel,wet scav,mw
+NO2       F           1.0000E-20        1.0000E-08   0.0   0.0  46.00 T T
+O3        F           1.0000E-20        1.0000E-08   0.0   0.0  48.00 T T
+SO2       F           3.0000E-03        1.0000E-08   0.0   0.0  64.00 T T
+CO        S           2.2000E-01        1.0000E-04   0.0   0.0  28.00 T T
+PPM25     P           2.0600E-01        1.0000E-08   0.0   0.0  130.00 T T
+PPM10     P           2.6800E-01        1.0000E-08   0.0   0.0  130.00 T T
+#Group -- put in fake group because no groups needed
+GSO2 SO2
+#Equations -- fake equation because this is a run without chemistry
+  1 [NO2]  -> [NO2]   ;  1  0.000E+00

@@ -1,0 +1,86 @@
+ &CTRL
+ RESTART = F,
+ FILE_RST        = '                                                                                                                 
+                                                                                                                                     
+          ',
+ PATH_RST        = '                                                                                                                 
+                                                                                                                                     
+          ',
+ TIME_RST        =  0.0000000E+00
+ /
+ &TIME1
+ YEAR_START      =        2011,
+ MONTH_START     =           7,
+ DAY_START       =          15,
+ TSTART  =  0.0000000E+00,
+ TZONE   =   17.00000    ,
+ LOCAL   = F
+ /
+ &TIME2
+ YEAR_END        =        2011,
+ MONTH_END       =           7,
+ DAY_END =          31,
+ TEND    =   23.00000    ,
+ TEND_HR =   9999.000    ,
+ DELT    =   900.0000    ,
+ DT_SAVE =   3600.000    
+ /
+ &FLAGS
+ TITLE   = 'modelComp_SW_ann                                                                ',
+ CREATE  = T,
+ AUDIT_CLASS     = '                                ',
+ AUDIT_ANALYST   = 'PKK                             ',
+ DYNAMIC = T,
+ DENSE_GAS       = F,
+ STATIC  = T,
+ RUN_MODE        =        4096,
+ PRJEFFECTS      =      -65535
+ /
+ &DOMAIN
+ CMAP    = 'LATLON                                                                          ',
+ XMIN    =  -110.3000    ,
+ XMAX    =  -105.9800    ,
+ YMIN    =   34.65000    ,
+ YMAX    =   38.90000    ,
+ ZMAX    =   9000.000    ,
+ VRES    =  9.9999996E+35,
+ HRES    =  9.9999996E+35,
+ UTM_ZONE        =       65535,
+ XREF    =  0.0000000E+00,
+ YREF    =  0.0000000E+00,
+ LON0    =  -108.0000    ,
+ LAT0    =   37.00000    
+ /
+ &OPTIONS
+ T_AVG   =   3600.000    ,
+ CMIN    =  0.0000000E+00,
+ DELMIN  =  9.9999996E+35,
+ WWTROP  =  9.9999998E-03,
+ EPSTROP =  3.9999990E-04,
+ SLTROP  =   10.00000    ,
+ UU_CALM =  0.2500000    ,
+ SL_CALM =   1000.000    ,
+ NZBL    =          13,
+ MGRD    =           2,
+ Z_DOSAGE        =  0.0000000E+00,
+ SMPFILE = '                                                                                                                         
+                                                                                                                                     
+  ',
+ DT_SMP  =   3600.000    ,
+ SUBSTRATE_TYPE  =           0
+ /
+ &MATDEF
+ CLASS   = 'GAS             ',
+ MNAME   = 'TRAC            ',
+ UNITS   = 'kg              ',
+ FILE_NAME       = '../../Common/FourCorners/fullchem_ae5_v34_amine_SW.imc                    ',
+ FILE_PATH       = '                                                                ',
+ GROUP_DEPOSITION        = T,
+ GROUP_DOSE      = T,
+ MULTI_COMP      = F,
+ CONC_MIN        =  1.0000001E-08,
+ DECAY_AMP       =  0.0000000E+00,
+ DECAY_MIN       =  0.0000000E+00,
+ DENSITY =   1.200000    ,
+ GAS_DEPOSITION  =  0.0000000E+00
+ /

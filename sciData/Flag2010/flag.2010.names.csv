@@ -1,0 +1,159 @@
+AreaID,FullName,Acronym,Quadrant,Class1Type,Receptor_file
+38,Acadia NP,acad,NE,NPS,acad-recep.dat
+100,Agua Tibia Wilderness,agti,SW,USFS,agti-recep.dat
+63,Alpine Lakes Wilderness,alla,NW,USFS,alla2-recep.dat
+64,Anaconda Pintler Wilderness,anac,NW,USFS,anac2-recep.dat
+101,Ansel Adams Wilderness,anad,SW,USFS,anad2-recep.dat
+15,Arches NP,arch,SW,NPS,arch2-recep.dat
+1,Badlands NP,badl,NW,NPS,badlwild2-recep.dat
+16,Bandelier NM,band,SW,NPS,bandwild-recep.dat
+156,Bering Sea Wilderness,bese,AK,FWS,beseRecep.dat
+17,Big Bend NP,bibe,SW,NPS,bibe3-recep.dat
+18,Black Canyon of the Gunnison NP,blca,SW,NPS,blcawild-recep.dat
+65,Bob Marshall Wilderness,boma,NW,USFS,boma3-recep.dat
+49,Bosque del Apache Wilderness,bosq,SW,FWS,bosqwild-recep.dat
+134,Boundary Waters Canoe Area Wilderness,bowa,NE,USFS,bowa3-recep.dat
+139,Bradwell Bay Wilderness,brba,SE,USFS,brba-recep.dat
+19,Bryce Canyon NP,brca,SW,NPS,brca-recep.dat
+53,Breton Wilderness,bret,SE,FWS,bretwild-recep.dat
+66,Bridger Wilderness,brid,NW,USFS,brid2-recep.dat
+54,Brigantine Wilderness,brig,SE,FWS,brigwild-recep.dat
+140,Caney Creek Wilderness,cacr,SE,USFS,cacr-recep.dat
+67,Cabinet Mountains Wilderness,camo,NW,USFS,camo2-recep.dat
+20,Canyonlands NP,cany,SW,NPS,cany2-recep.dat
+55,Cape Romain Wilderness,cape,SE,FWS,capewild-recep.dat
+21,Capitol Reef NP,care,SW,NPS,care2-recep.dat
+68,Caribou Wilderness,cari,NW,USFS,cari-recep.dat
+22,Carlsbad Caverns NP,cave,SW,NPS,cave-recep.dat
+56,Chassahowitzka Wilderness,chas,SE,FWS,chaswild-recep.dat
+23,Chiricahua NM,chir,SW,NPS,chir2-recep.dat
+102,Chiricahua Wilderness,chir,SW,USFS,chirwild-recep.dat
+141,Cohutta Wilderness,cohu,SE,USFS,cohu-recep.dat
+2,Crater Lake NP,crla,NW,NPS,crla2-recep.dat
+24,Craters of the Moon NM,crmo,NW,NPS,crmowild-recep.dat
+103,Cucamonga Wilderness,cuca,SW,USFS,cuca-recep.dat
+151,Denali NP & Pres,dena,AK,NPS,dena7Recep.dat
+104,Desolation Wilderness,deso,SW,USFS,deso-recep.dat
+69,Diamond Peak Wilderness,dipe,NW,USFS,dipe-recep.dat
+105,Dome Land Wilderness,dola,SW,USFS,dola2-recep.dat
+142,Dolly Sods Wilderness,doso,SE,USFS,doso-recep.dat
+70,Eagle Cap Wilderness,eaca,NW,USFS,eaca2-recep.dat
+106,Eagles Nest Wilderness,eane,SW,USFS,eane2-recep.dat
+107,Emigrant Wilderness,emig,SW,USFS,emig2-recep.dat
+41,Everglades NP,ever,SE,NPS,ever3-recep.dat
+71,Fitzpatrick Wilderness,fitz,NW,USFS,fitz2-recep.dat
+108,Flat Tops Wilderness,flto,SW,USFS,flto2-recep.dat
+109,Galiuro Wilderness,gali,SW,USFS,gali2-recep.dat
+72,Gates of the Mountains Wilderness,gamo,NW,USFS,gamo-recep.dat
+73,Gearhart Mountain Wilderness,gemo,NW,USFS,gemo-recep.dat
+110,Gila Wilderness,gila,SW,USFS,gila2-recep.dat
+3,Glacier NP,glac,NW,NPS,glac3-recep.dat
+74,Glacier Peak Wilderness,glpe,NW,USFS,glpe3-recep.dat
+75,Goat Rocks Wilderness,goro,NW,USFS,goro2-recep.dat
+25,Grand Canyon NP,grca,SW,NPS,grca3-recep.dat
+135,Great Gulf Wilderness,grgu,NE,USFS,grgu-recep.dat
+26,Great Sand Dunes NP & Pres,grsa,SW,NPS,grsawild-recep.dat
+42,Great Smoky Mountains NP,grsm,SE,NPS,grsm2-recep.dat
+4,Grand Teton NP,grte,NW,NPS,grte2-recep.dat
+27,Guadalupe Mountains NP,gumo,SW,NPS,gumo2-recep.dat
+152,Haleakala NP,hale,HI,NPS,hale-recep.dat
+153,Hawaii Volcanoes NP,havo,HI,NPS,havo2-recep.dat
+76,Hells Canyon Wilderness,heca,NW,USFS,heca2-recep.dat
+143,Hercules-Glades Wilderness,herc,SE,USFS,herc-recep.dat
+111,Hoover Wilderness,hoov,SW,USFS,hoov-recep.dat
+39,Isle Royale NP,isro,NE,NPS,isro2-recep.dat
+77,Jarbidge Wilderness,jarb,NW,USFS,jarb2-recep.dat
+144,James River Face Wilderness,jari,SE,USFS,jari-recep.dat
+112,John Muir Wilderness,jomu,SW,USFS,jomu2-recep.dat
+28,Joshua Tree NP,jotr,SW,NPS,jotrwild2-recep.dat
+145,Joyce Kilmer-Slickrock Wilderness,joyc,SE,USFS,joyc-recep.dat
+113,Kaiser Wilderness,kais,SW,USFS,kais-recep.dat
+78,Kalmiopsis Wilderness,kalm,NW,USFS,kalm2-recep.dat
+29,Kings Canyon,kica,SW,NPS,kica2-recep.dat
+5,Lava Beds NM,labe,NW,NPS,labewild-recep.dat
+114,La Garita Wilderness,laga,SW,USFS,laga2-recep.dat
+6,Lassen Volcanic NP,lavo,NW,NPS,lavo2-recep.dat
+146,Linville Gorge Wilderness,ligo,SE,USFS,ligo-recep.dat
+45,Lostwood Wilderness,lost,NW,FWS,lostwild-recep.dat
+136,Lye Brook Wilderness,lybr,NE,USFS,lybr-recep.dat
+115,Maroon Bells-Snowmass Wilderness,mabe,SW,USFS,mabe2-recep.dat
+43,Mammoth Cave NP,maca,SE,NPS,maca-recep.dat
+79,Marble Mountain Wilderness,mamo,NW,USFS,mamo2-recep.dat
+116,Mazatzal Wilderness,maza,SW,USFS,maza2-recep.dat
+46,Medicine Lake Wilderness,medi,NW,FWS,mediwild-recep.dat
+30,Mesa Verde NP,meve,SW,NPS,meve-recep.dat
+80,Mission Mountains Wilderness,mimo,NW,USFS,mimo2-recep.dat
+57,Mingo Wilderness,ming,SE,FWS,mingwild-recep.dat
+81,Mount Adams Wilderness,moad,NW,USFS,moad-recep.dat
+117,Mount Baldy Wilderness,moba,SW,USFS,moba-recep.dat
+82,Mount Hood Wilderness,moho,NW,USFS,moho-recep.dat
+83,Mount Jefferson Wilderness,moje,NW,USFS,moje2-recep.dat
+118,Mokelumne Wilderness,moke,SW,USFS,moke2-recep.dat
+84,Mountain Lakes Wilderness,mola,NW,USFS,mola-recep.dat
+51,Moosehorn Wilderness,moos,NE,FWS,mooswild-recep.dat
+7,Mount Rainier NP,mora,NW,NPS,mora2-recep.dat
+85,Mount Washington Wilderness,mowa,NW,USFS,mowa-recep.dat
+86,Mount Zirkel Wilderness,mozi,NW,USFS,mozi2-recep.dat
+87,North Absaroka Wilderness,noab,NW,USFS,noab2-recep.dat
+8,North Cascades NP,noca,NW,NPS,noca2-recep.dat
+58,Okefenokee Wilderness,okef,SE,FWS,okefwild2-recep.dat
+9,Olympic NP,olym,NW,NPS,olym3H2O-recep.dat
+147,Otter Creek Wilderness,otcr,SE,USFS,otcr-recep.dat
+88,Pasayten Wilderness,pasa,NW,USFS,pasa2-recep.dat
+119,Pecos Wilderness,peco,SW,USFS,peco2-recep.dat
+31,Petrified Forest NP,pefo,SW,NPS,pefo2-recep.dat
+120,Pine Mountain Wilderness,pimo,SW,USFS,pimo-recep.dat
+32,Pinnacles NM,pinn,SW,NPS,pinnwild2002-recep.dat
+33,Point Reyes NS,pore,SW,NPS,pinnwild-recep.dat
+137,Presidential Range-Dry River Wilderness,prra,NE,USFS,pore_pbwild-recep.dat
+138,Rainbow Lake Wilderness,rala,NE,USFS,prra-recep.dat
+89,Rawah Wilderness,rawa,NW,USFS,rala-recep.dat
+47,Red Rock Lakes Wilderness,redr,NW,FWS,rawa2-recep.dat
+10,Redwood NP,redw,NW,NPS,redrwild-recep.dat
+11,Rocky Mountain NP,romo,NW,NPS,redw2H2O-recep.dat
+0,Roosevelt Campobello International Park,roos,NE,USFS,romo2-recep.dat
+50,Salt Creek Wilderness,sacr,SW,FWS,sacrwild-recep.dat
+121,San Gabriel Wilderness,saga,SW,USFS,saga-recep.dat
+122,San Gorgonio Wilderness,sago,SW,USFS,sago-recep.dat
+34,Saguaro NP,sagu,SW,NPS,saguwild-recep.dat
+123,San Jacinto Wilderness,saja,SW,USFS,saja-recep.dat
+124,San Pedro Parks Wilderness,sape,SW,USFS,sape-recep.dat
+125,San Rafael Wilderness,sara,SW,USFS,sara2-recep.dat
+90,Sawtooth Wilderness,sawt,NW,USFS,sawt2-recep.dat
+91,Scapegoat Wilderness,scap,NW,USFS,scap2-recep.dat
+92,Selway-Bitterroot Wilderness,selw,NW,USFS,selw4-recep.dat
+52,Seney Wilderness,sene,NE,FWS,senewild-recep.dat
+35,Sequoia NP,sequ,SW,NPS,sequ2-recep.dat
+44,Shenandoah NP,shen,SE,NPS,shen2-recep.dat
+148,Shining Rock Wilderness,shro,SE,USFS,shro-recep.dat
+126,Sierra Ancha Wilderness,sian,SW,USFS,sian-recep.dat
+157,Simeonof Wilderness,sime,AK,FWS,simeRecep.dat
+149,Sipsey Wilderness,sips,SE,USFS,sips-recep.dat
+93,South Warner Wilderness,sowa,NW,USFS,sowa2-recep.dat
+59,Saint Marks Wilderness,stma,SE,FWS,stmawild-recep.dat
+94,Strawberry Mountain Wilderness,stmo,NW,USFS,stmo2-recep.dat
+127,Superstition Wilderness,supe,SW,USFS,supe2-recep.dat
+60,Swanquarter Wilderness,swan,SE,FWS,swanwild-recep.dat
+128,Sycamore Canyon Wilderness,syca,SW,USFS,syca-recep.dat
+95,Teton Wilderness,teto,NW,USFS,teto2-recep.dat
+96,Thousand Lakes Wilderness,thla,NW,USFS,thla-recep.dat
+12,Theodore Roosevelt NP,thro,NW,NPS,thro-recep.dat
+97,Three Sisters Wilderness,thsi,NW,USFS,thsi2-recep.dat
+158,Tuxedni Wilderness,tuxe,AK,FWS,tuxeRecep.dat
+48,UL Bend Wilderness,ulbe,NW,FWS,ulbewild-recep.dat
+150,Upper Buffalo Wilderness,upbu,SE,USFS,upbu-recep.dat
+129,Ventana Wilderness,vent,SW,USFS,vent2-recep.dat
+155,Virgin Islands NP,viis,SE,NPS,viis-recep.dat
+40,Voyageurs NP,voya,NE,NPS,voya2-recep.dat
+98,Washakie Wilderness,wash,NW,USFS,wash3-recep.dat
+130,West Elk Wilderness,weel,SW,USFS,weel2-recep.dat
+131,Weminuche Wilderness,wemi,SW,USFS,wemi2-recep.dat
+133,White Mountain Wilderness,whmo,SW,USFS,whmo-recep.dat
+132,Wheeler Peak Wilderness,whpe,SW,USFS,whpe-recep.dat
+13,Wind Cave NP,wica,NW,NPS,wica-recep.dat
+61,Wichita Mountains Wilderness,wich,SE,FWS,wichwild-recep.dat
+62,Wolf Island Wilderness,wolf,SE,FWS,wolfwild-recep.dat
+14,Yellowstone NP,yell,NW,NPS,yell4-recep.dat
+99,Yolla Bolly-Middle Eel Wilderness,yobo,NW,USFS,yobo2-recep.dat
+36,Yosemite NP,yose,SW,NPS,yose3-recep.dat
+37,Zion NP,zion,SW,NPS,zion2-recep.dat

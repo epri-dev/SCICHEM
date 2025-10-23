@@ -1,0 +1,26 @@
+# Adds functions to give color output to status messages for easier reading
+
+if(NOT "${CMAKE_SYSTEM_NAME}" STREQUAL "Windows")
+  string(ASCII 27 Esc)
+  set(color_reset "${Esc}[m")
+  set(color_bold  "${Esc}[1m")
+  set(red         "${Esc}[31m")
+  set(green       "${Esc}[32m")
+  set(yellow      "${Esc}[33m")
+  set(blue        "${Esc}[34m")
+  set(magenta     "${Esc}[35m")
+  set(cyan        "${Esc}[36m")
+  set(white       "${Esc}[37m")
+  set(bold_red     "${Esc}[1;31m")
+  set(bold_green   "${Esc}[1;32m")
+  set(bold_yellow  "${Esc}[1;33m")
+  set(bold_blue    "${Esc}[1;34m")
+  set(bold_magenta "${Esc}[1;35m")
+  set(bold_cyan    "${Esc}[1;36m")
+  set(bold_white   "${Esc}[1;37m")
+endif()
+
+# color_message wrapper for message function
+function(color_message mode color text)
+  message(${mode} "${${color}}${text}${color_reset}")
+endfunction()

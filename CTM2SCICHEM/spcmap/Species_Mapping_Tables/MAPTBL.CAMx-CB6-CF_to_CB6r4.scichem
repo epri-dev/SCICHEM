@@ -1,0 +1,286 @@
+#   SPECIES MAPPING TABLE FOR SPCMAP
+#
+#   SOURCE: CAMx-CB6-CF
+#   TARGET: SCICHEM CB6r2 (ICBC)
+#
+.START
+AACD            ppmV            1
+AACD            
+1.0
+ACET            ppmV            1
+ACET
+1.0
+ALD2            ppmV            1
+ALD2            
+1.0
+ALDX            ppmV            1
+ALDX            
+1.0
+BENZENE         ppmV            1
+BENZ            
+1.0
+CAT1            ppmV            1
+CAT1            
+1.0
+CO              ppmV            1
+CO              
+1.0
+CRES            ppmV            1
+CRES            
+1.0
+CRON            ppmV            1
+CRON            
+1.0
+ETH             ppmV            1
+ETH             
+1.0
+ETHA            ppmV            1
+ETHA            
+1.0
+ETHY            ppmV            1
+ETHY
+1.0
+ETOH            ppmV            1
+ETOH            
+1.0
+FACD            ppmV            1
+FACD            
+1.0
+FORM            ppmV            1
+FORM            
+1.0
+GLY             ppmV            1
+GLY
+1.0
+GLYD            ppmv            1
+GLYD
+1.0
+H2O2            ppmV            1
+H2O2            
+1.0
+HNO3            ppmV            1
+HNO3            
+1.0
+HONO            ppmV            1
+HONO            
+1.0
+HPLD            ppmV            1
+HPLD
+1.0
+IOLE            ppmV            1
+IOLE            
+1.0
+ISOP            ppmV            1
+ISOP            
+1.0
+ISPD            ppmV            1
+ISPD            
+1.0
+ISPX            ppmV            1
+ISPX
+1.0
+KET             ppmV            1
+KET
+1.0
+MEOH            ppmV            1
+MEOH            
+1.0
+MEPX            ppmV            1
+MEPX            
+1.0
+MGLY            ppmV            1
+MGLY            
+1.0
+N2O5            ppmV            1
+N2O5            
+1.0
+NO              ppmV            1
+NO              
+1.0
+NO2             ppmV            1
+NO2             
+1.0
+NO3             ppmV            1
+NO3             
+1.0
+NTR             ppmV            2
+NTR1            NTR2            
+1.0             
+INTR            ppmV            1
+INTR
+1.0
+O3              ppmV            1
+O3              
+1.0
+OLE             ppmV            1
+OLE             
+1.0
+OPAN            ppmV            1
+OPAN            
+1.0
+OPEN            ppmV            1
+OPEN            
+1.0
+PACD            ppmV            1
+PACD            
+1.0
+PAN             ppmV            1
+PAN             
+1.0
+PANX            ppmV            1
+PANX            
+1.0
+PAR             ppmV            1
+PAR             
+1.0             
+PNA             ppmV            1
+PNA             
+1.0
+PRPA            ppmV            1
+PRPA
+1.0
+ROOH            ppmV            1
+ROOH            
+1.0
+SO2             ppmV            1
+SO2             
+1.0
+SULF            ppmV            1
+SULF            
+1.0
+TERP            ppmV            1
+TERP            
+1.0
+TOL             ppmV            1
+TOL             
+1.0
+XYL             ppmV            1
+XYL             
+1.0
+NH3             ppmV            1
+NH3             
+1.0
+HCL             ppmV            1
+HCL             
+1.0
+SESQ            ppmV            1
+SQT             
+1.0
+SV_BNZ1         ppmV            1
+CG1             
+0.33333
+SV_TOL1         ppmV            1
+CG1             
+0.33333
+SV_XYL1         ppmV            1
+CG1             
+0.33333
+SV_BNZ2         ppmV            1
+CG2             
+0.33333
+SV_TOL2         ppmV            1
+CG2             
+0.33333
+SV_XYL2         ppmV            1
+CG2             
+0.33333
+SV_ISO1         ppmV            1
+CG3             
+0.33333
+SV_ISO2         ppmV            1
+CG4             
+0.33333
+SV_TRP1         ppmV            1
+CG3             
+0.33333
+SV_TRP2         ppmV            1
+CG4             
+0.33333
+SV_SQT          ppmV            2
+CG3             CG4       
+0.33333         0.33333
+ECH4            ppmV            1
+ECH4                         
+1.0
+ASO4J           micrograms/m**3 1
+PSO4            
+1.0
+ANO3J           micrograms/m**3 1
+PNO3            
+1.0
+ANH4J           micrograms/m**3 1
+PNH4            
+1.0
+AORGPAJ         micrograms/m**3 1
+POA             
+1.0
+AECJ            micrograms/m**3 1
+PEC             
+1.0
+ABNZ1J          micrograms/m**3 1
+SOA1            
+0.33333
+ATOL1J          micrograms/m**3 1
+SOA1            
+0.33333
+AXYL1J          micrograms/m**3 1
+SOA1             
+0.33333
+ABNZ2J          micrograms/m**3 1
+SOA2            
+0.33333
+ATOL2J          micrograms/m**3 1
+SOA2            
+0.33333
+AXYL2J          micrograms/m**3 1
+SOA2            
+0.33333
+ABNZ3J          micrograms/m**3 1
+SOPA            
+0.16666
+ATOL3J          micrograms/m**3 1
+SOPA            
+0.16666
+AXYL3J          micrograms/m**3 1
+SOPA            
+0.16666
+AISO1J          micrograms/m**3 1
+SOA3            
+0.33333
+AISO2J          micrograms/m**3 1
+SOA4            
+0.33333
+ATRP1J          micrograms/m**3 1
+SOA3            
+0.33333
+ATRP2J          micrograms/m**3 1
+SOA4            
+0.33333
+ASQTJ           micrograms/m**3 3
+SOA3            SOA4           SOPB            
+0.33333         0.33333        0.25
+AISO3J          micrograms/m**3 1
+SOPB
+0.25
+AOLGAJ          micrograms/m**3 1
+SOPA            
+0.5
+AOLGBJ          micrograms/m**3 1
+SOPB            
+0.5
+ANAJ            micrograms/m**3 1
+NA              
+1.0
+ACLJ            micrograms/m**3 1
+PCL             
+1.0
+AH2OJ           micrograms/m**3 1
+PH2O
+1.0
+A25J            micrograms/m**3 2
+FPRM            FCRS            
+1.0             1.0
+ASOIL           micrograms/m**3 1
+CPRM
+1.0
+.END

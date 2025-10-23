@@ -1,0 +1,253 @@
+; This file can be space-delimited or comma-delimited, or a mixture.
+; Comment characters are #, ;, and !.  Blank lines are ignored.
+; Keywords are not case-sensitive.  Filenames are used verbatim, and can
+; include spaces if enclosed in quotes.
+
+# The keyword PROJECT gives a space-delimited list of one or more SCICHEM 
+# project basenames. A list of basenames is useful if SCICHEM was run in sections
+# (e.g. months of a year).
+
+Project SW_ss
+
+# The keyword CALCulate specifies whether to include background concentrations.
+
+calculate plume  ! plume (default) or total = ambient + plume
+
+# Time to process. If PROJECT is a list of only 1 element (not run in sections), 
+# you can omit Start and Stop to process ALL data found.
+
+Start 2011-07-15:01   ! any of these forms work, also 2010/01/01 00
+stop  2011 07 31 24
+
+# The keyword TIMEZONE specifies the timezone you want to use for the output
+# concentrations, independent of the timezone used in the SCICHEM run being
+# processed. If SCICHEM used LST of GMT-0500, give 0 to shift back to UTC.
+# This affects N-hour concentrations (N > 1) and max daily rolling N-hour 
+# concentrations (because the 'day' is affected by the output timezone).
+# TimeZone is relative to GMT, i.e. -5 (GMT-05) is the US East Coast.
+
+TimeZone   -7    ! default is zero, i.e. GMT-00
+
+# Receptor section:
+# Receptor Sets can be specified by either:
+#   Using the REC  keyword to specify a file containing arbitrarily-spaced points.
+#   Using the GRID keyword to specify a set of regularly-spaced receptors.
+# NetCDF output only works with GRIDded (regularly-spaced) receptor sets. 
+# You can give zero REC lines or zero GRID lines, but you must specify at least
+# one REC or GRID to get any output. 
+# The Name of each receptor set is used in the Output section, below.
+
+# RECeptors (repeatable) keyword specifies the receptor files to use.
+# 2nd word is a user-specified NAME.  If the NAME matches the first 4 characters
+#    in the FLAG (2010) look-up tables, it is to be treated as a Class I area
+#    and VISilbity obscuration can be calculated.
+# 3rd word is either LONLAT (synonym: LL) or anything else for Cartesian
+#    (including UTM). MUST MATCH COORDINATE SYSTEM and UNITS of the SCICHEM run!
+#    NOTE: The Class I area files are lon,lat,elev so custom files must also
+#    be lon,lat (elev is ignored).
+# 4th word is one of:
+#    1  if the receptor set is to be treated as a Class I area
+#    2  if the receptor set is a Class II area (i.e. not Class I)
+# 5th word is the filename. Files can be the Class I receptor files downloaded 
+#    from http://www2.nature.nps.gov/air/maps/Receptors/index.cfm; or can 
+#    contain user-specified receptors: one UTMx,UTMy, or LON,LAT pair per line.
+
+#   Name   LL/UTM Class Filename
+REC band   LATLON 1     ../../../sciData/Class1Area/bandwild-recep.dat ! Bandelier NM
+REC laga   LATLON 1     ../../../sciData/Class1Area/laga2-recep.dat    ! Garita WA
+REC meve   LATLON 1     ../../../sciData/Class1Area/meve-recep.dat     ! Mesa Verde NP
+REC pefo   LATLON 1     ../../../sciData/Class1Area/pefo2-recep.dat    ! Petrified Forest NP
+REC sape   LATLON 1     ../../../sciData/Class1Area/sape-recep.dat     ! San Pedro Parks WA
+REC wemi   LATLON 1     ../../../sciData/Class1Area/wemi2-recep.dat    ! Weminuche WA
+		        
+rec sam    LATLON 2     SW_grid.sam
+
+# GRID (repeatable) keyword specifies a regularly-spaced receptor grid to use.
+# 2nd word is a user-specified NAME.
+# 3rd word is either LONLAT (synonym: LL) or anything else for Cartesian.
+# 4th word is the grid spacing, DX, in cartesian units or lat-lon.
+# 5th and 6th words are the coordinates of the southwest (lower left) gridpoint
+# 7th and 8th words are the coordinates of the northeast (upper right) gridpoint
+#   Use the same X,Y cartesian units used in SCICHEM - mostly likely km (not m).
+#   If specifying a lat-lon grid, then the X's are longitude, Y's are latitude.
+#   GRIDs cannot be treated as Class I areas - those REC sets are ungridded.
+
+#     Name    LL/UTM  DX     xWest    ySouth    xEast    yNorth   
+GRID  coarse  LL      0.036  -110.3   34.65     -105.98  38.90  ! approx 4km resolution
+
+# Output section:
+# 1st word is one of 
+#    CON for concentration          (default: ug/m3)
+#    DEP for total deposition       (default: kg/ha)
+#    WET for wet   deposition       (default: kg/ha)
+#    DRY for dry   deposition       (default: kg/ha)
+#    VIS for visibility degradation (only:    percent change)
+# 2nd word is one of:
+#    The chemical SPECIES to process, e.g. no2 or o3 or pm25, etc.
+#    dBext for the change to the background extinction coefficient for visibility
+#    cont  for the contributions of each term in the equation for dBext
+# 3rd word is the requested output units:
+#    Gas species can be written in ug/m3, ppm, or ppb
+#    Particlate species can only be written in ug/m3
+#    Deposition can be written in kg/ha, g/m2, kg/m2, g/cm2, etc.
+#    Visibility can only be written in Percent
+# 4th word is the Receptor Set for this output, must match either a REC or GRID
+# 5th word is a SPACE selection criteria, one of:
+#    AllRec: Output for every receptor. If TIME=ALL, it will be like a POSTFILE.
+#       This is the only choice that makes sense for GRIDs.
+#    MaxRec: Output a single receptor within each receptor set, where the 
+#       maximum HIGH-highest (HIGH==RANK) occurred, e.g. the H8H.
+#    >=N: Output all values (of HIGH==RANK) that exceed the given concentration.
+#       Remember that if using 'calculate plume' you can have valid negative
+#       concentrations (e.g. NOx titration of O3), so >0 might discard data.
+# 6th word is a TIME or RANK selection criteria, one of:
+#    All: Output values for all time Periods
+#       To get a time series, use a RECeptor set with only 1 point and 'TIME=ALL'.
+#    1st, 2nd,... 8th (etc) highest HIGH or RANK (which are 'synonyms').
+# 7th and 8th words specify the PERIOD over which to take some STATISTIC.
+# 9th word is the STATISTIC, one of:
+#    Average  to take the *windowed* average (e.g. 1-8, 9-16, 17-24).
+#       See the examples for 8-hr CO below.
+#    MaxDaily to take the maximum PERIOD *rolling* average from each 24 hours. 
+#       See the examples for 8-hr O3 below. Note a rolling 1-hr MaxDaily is the
+#       same as a windowed 1-hr MaxDaily value, so 1-hr NO2/SO2 use MaxDaily.
+# 10th word is the output FILE TYPE:
+#    CSV  Comma-separated values
+#    XZY  Actually XYLLZUT: the X,Y,lat,lon, value, units, timestamp
+#    POST AERMOD-style POSTFILE (values for all times and all receptors)
+#    PLOT AERMOD-style PLOTFILE (a single high/rank value at all receptor)
+#    NC   NetCDF gridded file in I/O API-compliant format (only for GRIDs)
+#    GRD  Surfer 6 ascii grid file (only for GRIDs)
+# 11th word is the FILENAME, can contain spaces if enclosed in quotes.
+
+# The "answers" needed for a typical Class I SILs (for PSD increment) and AQRV analysis.
+# One block of requested outputs for each Class I area - copy, paste, search-n-replace...
+#
+# NOTE: sciDOSpost follows USEPA convention and skips periods with < 75% data, so using
+# Period = "1 yr" will not produce any output on this 17-day (408 hr) sample run. 
+# You probably want annual averages, so change "408 hr" to "  1 yr" when running for a 
+# full year.
+#
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  no2   ug/m3  band    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  band    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  band    MaxRec  1st     3 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  band    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  band    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  band    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  band    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  band    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  no2   ug/m3  laga    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  laga    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  laga    MaxRec  1st     3 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  laga    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  laga    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  laga    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  laga    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  laga    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  no2   ug/m3  meve    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  meve    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  meve    MaxRec  1st     3 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  meve    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  meve    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  meve    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  meve    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  meve    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  no2   ug/m3  pefo    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  pefo    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  pefo    MaxRec  1st     3 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  pefo    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  pefo    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  pefo    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  pefo    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  pefo    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  no2   ug/m3  sape    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  sape    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  sape    MaxRec  1st     3 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  sape    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  sape    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  sape    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  sape    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  sape    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  no2   ug/m3  wemi    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  wemi    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  wemi    MaxRec  1st     3 hr  Average    CSV   max_concentrations.csv
+con  so2   ug/m3  wemi    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  wemi    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm25  ug/m3  wemi    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  wemi    MaxRec  1st   408 hr  Average    CSV   max_concentrations.csv
+con  pm10  ug/m3  wemi    MaxRec  1st    24 hr  Average    CSV   max_concentrations.csv
+
+# Acid Deposition (total Sulfur and Nitrogen):
+#
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+dep  N     kg/ha  band    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  S     kg/ha  band    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  N     kg/ha  laga    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  S     kg/ha  laga    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  N     kg/ha  meve    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  S     kg/ha  meve    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  N     kg/ha  pefo    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  S     kg/ha  pefo    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  N     kg/ha  sape    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  S     kg/ha  sape    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  N     kg/ha  wemi    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+dep  S     kg/ha  wemi    MaxRec  1st   408 hr  Sum        CSV   max_dep.csv
+
+# Visibility extinction coefficient (dBext) from FLAG (2010), useful
+# for PSD Class I analyses. The '>5' means write each 24-hour average that
+# has a dBext > 5%, useful counting the days with greater than 5% change.
+#
+#    Spec  Units  RecSet  Space   Time  Period  Statistic FType Filename
+vis  dBext %      band    MaxRec  8th   24 hr   Average   CSV   vis_results.csv
+vis  dBext %      band    >5      All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      band    >10     All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      laga    MaxRec  8th   24 hr   Average   CSV   vis_results.csv
+vis  dBext %      laga    >5      All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      laga    >10     All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      meve    MaxRec  8th   24 hr   Average   CSV   vis_results.csv
+vis  dBext %      meve    >5      All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      meve    >10     All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      pefo    MaxRec  8th   24 hr   Average   CSV   vis_results.csv
+vis  dBext %      pefo    >5      All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      pefo    >10     All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      sape    MaxRec  8th   24 hr   Average   CSV   vis_results.csv
+vis  dBext %      sape    >5      All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      sape    >10     All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      wemi    MaxRec  8th   24 hr   Average   CSV   vis_results.csv
+vis  dBext %      wemi    >5      All   24 hr   Average   CSV   vis_exceedence.csv
+vis  dBext %      wemi    >10     All   24 hr   Average   CSV   vis_exceedence.csv
+
+# Other "answers" of interest, or useful to figuring out what happened in the model.
+# Listed here for only one Class I area, as examples or templates.
+
+# Total, Wet, and Dry Deposition components, for all points in one Class I area:
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+dep  N     mg/m2  meve    AllRec  1st   408 hr  Sum        xyz   meve.dep.xyz
+wet  N     ug/cm2 meve    AllRec  1st   408 hr  Sum        xyz   meve.dep.xyz
+dry  N     ug/cm2 meve    AllRec  1st   408 hr  Sum        xyz   meve.dep.xyz
+
+# Contributions to Visibility Impairment, at the point of the the maximum:
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+vis  Cont  %      meve    MaxRec  8th   24 hr   Average    CSV   meve.vis_contrib.csv
+
+# The concentrations of particulate sulfate and nitrate.
+# Note the units, and its use of the gridded receptor set named "coarse".
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  pso4  ug/m3  coarse  AllRec  1st   24 hr   Average    GRD   pso4.max.grd
+con  pno3  ug/m3  coarse  AllRec  1st   24 hr   Average    GRD   pno3.max.grd
+con  pso4  ug/m3  sam     AllRec  1st   24 hr   Average    xyz   pso4.max.smp
+con  pno3  ug/m3  sam     AllRec  1st   24 hr   Average    xyz   pno3.max.smp
+
+# The 8-hour (rolling: 1-8, 2-9, ... 17-24) max daily average (MDA8). 
+# Particulates must be in ug/m3, but concentrations can be converted to ppm or ppb.
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  o3    ppb    coarse  AllRec  4th    8 hr   MaxDaily   GRD   o3.DV.grd
+con  o3    ppb    sam     AllRec  4th    8 hr   MaxDaily   xyz   o3.DV.smp
+
+# The 24-hr NO2 and SO2 design values, for a NAAQS comparison:
+#    Spec  Units  RecSet  Space   Time  Period  Statistic  FType Filename
+con  no2   ug/m3  coarse  AllRec  8th    1 hr   MaxDaily   XYZ   no2.dv.xyz
+con  so2   ug/m3  coarse  AllRec  4th    1 hr   MaxDaily   GRD   so2.dv.grd
+con  no2   ug/m3  sam     AllRec  8th    1 hr   MaxDaily   XYZ   no2.dv.smp
+con  so2   ug/m3  sam     AllRec  4th    1 hr   MaxDaily   xyz   so2.dv.smp

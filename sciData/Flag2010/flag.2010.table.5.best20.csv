@@ -1,0 +1,159 @@
+Acronym,Class I Area,(NH4)2SO4 (µg/m³),NH4NO3 (µg/m³),OM (µg/m³),EC (µg/m³),Soil (µg/m³),CM (µg/m³),Sea Salt (µg/m³),Rayleigh (Mm-1),Type
+acad,Acadia NP,0.09,0.03,0.68,0.01,0.1,0.94,0.03,12,B20%
+agti,Agua Tibia Wilderness,0.03,0.04,0.26,0.01,0.26,1.2,0.04,11,B20%
+alla,Alpine Lakes Wilderness,0.04,0.03,0.15,0.01,0.05,0.3,0.02,11,B20%
+anac,Anaconda Pintler Wilderness,0.04,0.03,0.12,0.01,0.07,0.31,0,10,B20%
+anad,Ansel Adams Wilderness,0.02,0.01,0.12,0.01,0.07,0.44,0.01,9,B20%
+arch,Arches NP,0.07,0.06,0.23,0.01,0.14,0.89,0.01,9,B20%
+badl,Badlands NP,0.05,0.05,0.23,0.01,0.22,0.99,0,11,B20%
+band,Bandelier NM,0.07,0.06,0.31,0.01,0.16,0.91,0,9,B20%
+bese,Bering Sea Wilderness,,,,,,,,,B20%
+bibe,Big Bend NP,0.05,0.04,0.24,0.01,0.11,0.8,0,10,B20%
+blca,Black Canyon of the Gunnison NP,0.06,0.04,0.24,0.01,0.13,0.88,0,9,B20%
+boma,Bob Marshall Wilderness,0.05,0.04,0.19,0.01,0.08,0.37,0,10,B20%
+bosq,Bosque del Apache Wilderness,0.08,0.06,0.3,0.01,0.15,0.97,0.02,10,B20%
+bowa,Boundary Waters Canoe Area Wilderness,0.11,0.02,0.5,0.01,0.13,0.86,0.01,11,B20%
+brba,Bradwell Bay Wilderness,0.14,0.06,0.81,0.01,0.24,2.17,0.04,11,B20%
+bret,Breton Wilderness,0.14,0.05,0.73,0.01,0.27,2.26,0.07,11,B20%
+brid,Bridger Wilderness,0.05,0.04,0.14,0.01,0.07,0.33,0,9,B20%
+brig,Brigantine Wilderness,0.12,0.04,0.86,0.01,0.24,1.73,0.04,12,B20%
+brca,Bryce Canyon NP,0.04,0.05,0.18,0.01,0.1,0.6,0,9,B20%
+camo,Cabinet Mountains Wilderness,0.05,0.05,0.13,0.01,0.09,0.42,0.01,10,B20%
+cacr,Caney Creek Wilderness,0.07,0.06,0.68,0.01,0.14,1.51,0.02,11,B20%
+cany,Canyonlands NP,0.07,0.06,0.23,0.01,0.14,0.89,0.01,9,B20%
+cape,Cape Romain Wilderness,0.14,0.06,0.88,0.01,0.24,1.99,0.04,12,B20%
+care,Capitol Reef NP,0.06,0.07,0.26,0.01,0.15,0.79,0.01,9,B20%
+cari,Caribou Wilderness,0.03,0.02,0.12,0.01,0.08,0.24,0.01,10,B20%
+cave,Carlsbad Caverns NP,0.06,0.05,0.26,0.01,0.12,0.82,0,9,B20%
+chas,Chassahowitzka Wilderness,0.14,0.08,1.02,0.01,0.28,2.46,0.02,11,B20%
+chir,Chiricahua NM,0.06,0.05,0.27,0.01,0.13,0.81,0,10,B20%
+chir,Chiricahua Wilderness,0.06,0.05,0.27,0.01,0.13,0.81,0,10,B20%
+cohu,Cohutta Wilderness,0.09,0.08,0.69,0.01,0.15,1.06,0.01,11,B20%
+crla,Crater Lake NP,0.02,0.02,0.08,0.01,0.07,0.23,0.01,9,B20%
+crmo,Craters of the Moon NM,0.06,0.05,0.19,0.01,0.12,0.69,0.01,10,B20%
+cuca,Cucamonga Wilderness,0.03,0.03,0.15,0.01,0.14,0.67,0.01,9,B20%
+dena,Denali NP & Pres,0.04,0.02,0.08,0.01,0.05,0.31,0.01,11,B20%
+deso,Desolation Wilderness,0.04,0.03,0.15,0.01,0.09,0.51,0.01,9,B20%
+dipe,Diamond Peak Wilderness,0.02,0.02,0.08,0.01,0.07,0.23,0.01,9,B20%
+doso,Dolly Sods Wilderness,0.1,0.05,0.8,0.01,0.17,0.96,0.01,10,B20%
+dola,Dome Land Wilderness,0.03,0.02,0.18,0.01,0.08,0.43,0.01,10,B20%
+eaca,Eagle Cap Wilderness,0.05,0.02,0.17,0.01,0.1,0.5,0.01,10,B20%
+eane,Eagles Nest Wilderness,0.04,0.03,0.14,0.01,0.08,0.36,0,8,B20%
+emig,Emigrant Wilderness,0.03,0.02,0.1,0,0.08,0.5,0.01,10,B20%
+ever,Everglades NP,0.16,0.07,0.77,0.01,0.16,1.86,0.12,11,B20%
+fitz,Fitzpatrick Wilderness,0.05,0.04,0.14,0.01,0.07,0.33,0,9,B20%
+flto,Flat Tops Wilderness,0.04,0.03,0.14,0.01,0.08,0.36,0,8,B20%
+gali,Galiuro Wilderness,0.06,0.05,0.27,0.01,0.13,0.81,0,10,B20%
+gamo,Gates of the Mountains Wilderness,0.04,0.04,0.13,0.01,0.07,0.49,0,9,B20%
+gemo,Gearhart Mountain Wilderness,0.02,0.02,0.08,0.01,0.07,0.23,0.01,9,B20%
+gila,Gila Wilderness,0.06,0.04,0.22,0.01,0.09,0.45,0,9,B20%
+glac,Glacier NP,0.05,0.03,0.17,0.01,0.11,0.57,0,11,B20%
+glpe,Glacier Peak Wilderness,0.02,0.03,0.09,0,0.04,0.28,0.01,11,B20%
+goro,Goat Rocks Wilderness,0.02,0.01,0.06,0,0.04,0.21,0.01,10,B20%
+grca,Grand Canyon NP,0.04,0.03,0.12,0.01,0.1,0.59,0,9,B20%
+grte,Grand Teton NP,0.06,0.05,0.17,0.01,0.08,0.33,0,9,B20%
+grgu,Great Gulf Wilderness,0.09,0.04,0.56,0.01,0.1,1.05,0.02,11,B20%
+grsa,Great Sand Dunes NP & Pres,0.06,0.05,0.29,0.01,0.15,0.9,0,9,B20%
+grsm,Great Smoky Mountains NP,0.09,0.06,0.78,0.01,0.16,1.47,0.01,11,B20%
+gumo,Guadalupe Mountains NP,0.06,0.05,0.26,0.01,0.12,0.82,0,9,B20%
+hale,Haleakala NP,0.05,0.04,0.24,0.01,0.11,1.59,0.13,10,B20%
+havo,Hawaii Volcanoes NP,0.03,0.04,0.27,0.01,0.06,0.64,0.11,10,B20%
+heca,Hells Canyon Wilderness,0.06,0.02,0.19,0.01,0.14,0.81,0.01,11,B20%
+herc,Hercules-Glades Wilderness,0.09,0.06,0.78,0.01,0.16,1.86,0.02,11,B20%
+hoov,Hoover Wilderness,0.03,0.02,0.08,0.01,0.06,0.55,0,9,B20%
+isro,Isle Royale NP,0.1,0.02,0.34,0.01,0.09,0.79,0.01,12,B20%
+jari,James River Face Wilderness,0.11,0.06,0.71,0.01,0.2,1.39,0.01,11,B20%
+jarb,Jarbidge Wilderness,0.05,0.03,0.14,0.01,0.05,0.33,0,10,B20%
+jomu,John Muir Wilderness,0.02,0.01,0.12,0.01,0.07,0.44,0.01,9,B20%
+jotr,Joshua Tree NP,0.04,0.02,0.2,0.01,0.17,0.94,0.02,10,B20%
+joyc,Joyce Kilmer-Slickrock Wilderness,0.09,0.06,0.78,0.01,0.16,1.47,0.01,11,B20%
+kais,Kaiser Wilderness,0.02,0.01,0.12,0.01,0.07,0.44,0.01,9,B20%
+kalm,Kalmiopsis Wilderness,0.03,0.02,0.31,0.01,0.05,0.99,0.04,12,B20%
+kica,Kings Canyon,0.03,0.03,0.18,0.01,0.08,0.73,0.02,11,B20%
+laga,La Garita Wilderness,0.06,0.04,0.24,0.01,0.13,0.88,0,9,B20%
+lavo,Lassen Volcanic NP,0.03,0.02,0.12,0.01,0.08,0.24,0.01,10,B20%
+labe,Lava Beds NM,0.03,0.03,0.14,0.01,0.06,0.46,0,10,B20%
+ligo,Linville Gorge Wilderness,0.08,0.06,0.67,0.01,0.14,1.04,0.01,11,B20%
+lost,Lostwood Wilderness,0.06,0.04,0.23,0.01,0.22,1.05,0.01,11,B20%
+lybr,Lye Brook Wilderness,0.05,0.03,0.36,0.01,0.09,0.63,0.01,11,B20%
+maca,Mammoth Cave NP,0.11,0.08,0.86,0.01,0.24,1.54,0.01,11,B20%
+mamo,Marble Mountain Wilderness,0.03,0.02,0.12,0.01,0.06,0.36,0.01,10,B20%
+mabe,Maroon Bells-Snowmass Wilderness,0.04,0.03,0.14,0.01,0.08,0.36,0,8,B20%
+maza,Mazatzal Wilderness,0.06,0.05,0.3,0.01,0.14,0.8,0,10,B20%
+medi,Medicine Lake Wilderness,0.06,0.05,0.24,0.01,0.2,1.13,0,11,B20%
+meve,Mesa Verde NP,0.06,0.05,0.24,0.01,0.17,0.67,0,9,B20%
+ming,Mingo Wilderness,0.12,0.04,0.88,0.01,0.21,1.49,0.01,12,B20%
+mimo,Mission Mountains Wilderness,0.05,0.04,0.19,0.01,0.08,0.37,0,10,B20%
+moke,Mokelumne Wilderness,0.04,0.03,0.15,0.01,0.09,0.51,0.01,9,B20%
+moos,Moosehorn Wilderness,0.11,0.04,0.76,0.01,0.12,1.25,0.02,12,B20%
+moad,Mount Adams Wilderness,0.02,0.01,0.06,0,0.04,0.21,0.01,10,B20%
+moba,Mount Baldy Wilderness,0.05,0.04,0.19,0.01,0.11,0.53,0,9,B20%
+moho,Mount Hood Wilderness,0.02,0.02,0.06,0,0.05,0.15,0.01,10,B20%
+moje,Mount Jefferson Wilderness,0.02,0.02,0.08,0,0.03,0.31,0.01,11,B20%
+mora,Mount Rainier NP,0.03,0.02,0.18,0.01,0.06,0.83,0.02,11,B20%
+mowa,Mount Washington Wilderness,0.02,0.02,0.08,0,0.03,0.31,0.01,11,B20%
+mozi,Mount Zirkel Wilderness,0.06,0.04,0.16,0.01,0.09,0.6,0,8,B20%
+mola,Mountain Lakes Wilderness,0.02,0.02,0.08,0.01,0.07,0.23,0.01,9,B20%
+noab,North Absaroka Wilderness,0.05,0.04,0.16,0,0.11,0.82,0,9,B20%
+noca,North Cascades NP,0.02,0.03,0.09,0,0.04,0.28,0.01,11,B20%
+okef,Okefenokee Wilderness,0.13,0.07,0.92,0.01,0.22,1.69,0.03,11,B20%
+olym,Olympic NP,0.04,0.03,0.23,0.01,0.03,0.5,0.04,11,B20%
+otcr,Otter Creek Wilderness,0.1,0.05,0.8,0.01,0.17,0.96,0.01,10,B20%
+pasa,Pasayten Wilderness,0.04,0.03,0.07,0,0.07,0.24,0.01,10,B20%
+peco,Pecos Wilderness,0.04,0.03,0.16,0.01,0.08,0.67,0,8,B20%
+pefo,Petrified Forest NP,0.06,0.06,0.28,0.01,0.15,0.75,0,9,B20%
+pimo,Pine Mountain Wilderness,0.06,0.05,0.3,0.01,0.14,0.8,0,10,B20%
+pinn,Pinnacles NM,0.06,0.04,0.31,0.01,0.16,1.5,0.06,11,B20%
+pore,Point Reyes NS,0.12,0.04,0.33,0.01,0.13,1.08,0.25,12,B20%
+prra,Presidential Range-Dry River Wilderness,0.09,0.04,0.56,0.01,0.1,1.05,0.02,11,B20%
+rala,Rainbow Lake Wilderness,0.11,0.02,0.5,0.01,0.13,0.86,0.01,11,B20%
+rawa,Rawah Wilderness,0.06,0.04,0.16,0.01,0.09,0.6,0,8,B20%
+redr,Red Rock Lakes Wilderness,0.06,0.05,0.17,0.01,0.08,0.33,0,9,B20%
+redw,Redwood NP,0.05,0.03,0.28,0.01,0.06,1.02,0.1,11,B20%
+romo,Rocky Mountain NP,0.04,0.02,0.15,0.01,0.09,0.68,0,9,B20%
+roos,Roosevelt Campobello International Park,0.11,0.04,0.76,0.01,0.12,1.25,0.02,12,B20%
+sagu,Saguaro NP,0.07,0.05,0.32,0.01,0.22,1.15,0.03,10,B20%
+stma,Saint Marks Wilderness,0.14,0.06,0.81,0.01,0.24,2.17,0.04,11,B20%
+sacr,Salt Creek Wilderness,0.05,0.06,0.31,0.01,0.17,1,0.02,10,B20%
+saga,San Gabriel Wilderness,0.03,0.03,0.15,0.01,0.14,0.67,0.01,9,B20%
+sago,San Gorgonio Wilderness,0.03,0.02,0.15,0.01,0.1,0.62,0.02,10,B20%
+saja,San Jacinto Wilderness,0.03,0.02,0.15,0.01,0.1,0.62,0.02,10,B20%
+sape,San Pedro Parks Wilderness,0.05,0.04,0.14,0.01,0.09,0.34,0.01,8,B20%
+sara,San Rafael Wilderness,0.03,0.04,0.22,0.01,0.11,0.79,0.02,10,B20%
+sawt,Sawtooth Wilderness,0.05,0.04,0.23,0.01,0.1,0.37,0,10,B20%
+scap,Scapegoat Wilderness,0.05,0.04,0.19,0.01,0.08,0.37,0,10,B20%
+selw,Selway-Bitterroot Wilderness,0.04,0.03,0.12,0.01,0.07,0.31,0,10,B20%
+sene,Seney Wilderness,0.08,0.01,0.38,0.01,0.09,0.8,0.01,12,B20%
+sequ,Sequoia NP,0.03,0.03,0.18,0.01,0.08,0.73,0.02,11,B20%
+shen,Shenandoah NP,0.08,0.07,0.56,0.01,0.14,1.2,0.01,10,B20%
+shro,Shining Rock Wilderness,0.05,0.05,0.51,0.01,0.13,0.56,0.01,10,B20%
+sian,Sierra Ancha Wilderness,0.06,0.05,0.33,0.02,0.14,0.73,0.01,10,B20%
+sime,Simeonof Wilderness,0.06,0.05,0.25,0.02,0.04,1.18,0.25,12,B20%
+sips,Sipsey Wilderness,0.11,0.1,0.81,0.01,0.25,1.66,0.01,11,B20%
+sowa,South Warner Wilderness,0.03,0.03,0.14,0.01,0.06,0.46,0,10,B20%
+stmo,Strawberry Mountain Wilderness,0.05,0.02,0.17,0.01,0.1,0.5,0.01,10,B20%
+supe,Superstition Wilderness,0.07,0.05,0.31,0.01,0.16,0.84,0,10,B20%
+swan,Swanquarter Wilderness,0.12,0.06,0.65,0.01,0.23,2.38,0.05,12,B20%
+syca,Sycamore Canyon Wilderness,0.06,0.05,0.28,0.01,0.12,0.62,0,9,B20%
+teto,Teton Wilderness,0.06,0.05,0.17,0.01,0.08,0.33,0,9,B20%
+thro,Theodore Roosevelt NP,0.07,0.04,0.26,0.01,0.21,1.2,0.01,11,B20%
+thla,Thousand Lakes Wilderness,0.03,0.02,0.12,0.01,0.08,0.24,0.01,10,B20%
+thsi,Three Sisters Wilderness,0.02,0.02,0.08,0,0.03,0.31,0.01,11,B20%
+tuxe,Tuxedni Wilderness,0.03,0.04,0.09,0.01,0.03,0.52,0.05,12,B20%
+ulbe,UL Bend Wilderness,0.05,0.03,0.18,0.01,0.15,0.93,0.01,11,B20%
+upbu,Upper Buffalo Wilderness,0.08,0.06,0.68,0.01,0.16,1.33,0.01,11,B20%
+vent,Ventana Wilderness,0.06,0.04,0.31,0.01,0.16,1.5,0.06,11,B20%
+viis,Virgin Islands NP,0.18,0.07,0.21,0.01,0.12,1.53,0.26,11,B20%
+voya,Voyageurs NP,0.12,0.02,0.56,0.01,0.1,0.86,0.01,12,B20%
+wash,Washakie Wilderness,0.05,0.04,0.16,0,0.11,0.82,0,9,B20%
+wemi,Weminuche Wilderness,0.06,0.04,0.24,0.01,0.13,0.88,0,9,B20%
+weel,West Elk Wilderness,0.04,0.03,0.14,0.01,0.08,0.36,0,8,B20%
+whpe,Wheeler Peak Wilderness,0.04,0.03,0.16,0.01,0.08,0.67,0,8,B20%
+whmo,White Mountain Wilderness,0.05,0.03,0.24,0.01,0.08,0.67,0.01,9,B20%
+wich,Wichita Mountains Wilderness,0.03,0.04,0.28,0.01,0.15,1.52,0.01,11,B20%
+wica,Wind Cave NP,0.05,0.04,0.2,0.01,0.19,1.05,0,10,B20%
+wolf,Wolf Island Wilderness,0.13,0.07,0.92,0.01,0.22,1.69,0.03,11,B20%
+yell,Yellowstone NP,0.06,0.05,0.17,0.01,0.08,0.33,0,9,B20%
+yobo,Yolla Bolly-Middle Eel Wilderness,0.03,0.02,0.12,0.01,0.06,0.36,0.01,10,B20%
+yose,Yosemite NP,0.03,0.02,0.1,0,0.08,0.5,0.01,10,B20%
+zion,Zion NP,0.05,0.06,0.28,0.01,0.1,0.6,0.01,10,B20%

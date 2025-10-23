@@ -1,0 +1,38 @@
+ &SCN
+ RELNAME = '                                ',
+ RELDISPLAY      = '<empty>                                                                                                          
+                                                                               ',
+ TREL    =  0.0000000E+00,
+ XREL    =  -108.000000000000     ,
+ YREL    =   37.0000000000000     ,
+ ZREL    =   184.0000    ,
+ CMASS   =   1.000000    ,
+ SUBGROUP        =           1,
+ TDUR    =   9000.000    ,
+ SIZE    =   6.000000    ,
+ UMOM    =  9.9999996E+35,
+ VMOM    =  9.9999996E+35,
+ WMOM    =   23.00000    ,
+ BUOY    =   156.0000    ,
+ LOGNORM_MMD     = -9.9999996E+35,
+ LOGNORM_SIGMA   = -9.9999996E+35,
+ SLURRY_FRACTION = -9.9999996E+35,
+ ACTIVE_FRACTION =   1.000000    ,
+ NEXT_UPDTTIME   = -9.9999996E+35,
+ RELSTATUS       =           1,
+ RELTYP  = 'CS  ',
+ RELMAT  = 'TRAC            '
+ /
+#START_MC
+             NO2   8.630000E+00
+              NO   5.065400E+01
+             SO2   2.877000E+01
+              CO   1.539000E+01
+           ANO3J   6.600000E-03
+           ASO4J   1.176000E+00
+            AECJ   4.950000E-01
+         AORGPAJ   5.120000E-01
+           ANH4J   4.000000E-02
+            ACLJ   7.300000E-03
+            A25J   9.323000E+00
+#END_MC
